@@ -56,9 +56,10 @@ class TerminalModule(TerminalBase):
     ]
 
     terminal_stderr_re = [
-        re.compile(br"\nbad command name"),
-        re.compile(br"\nno such item"),
-        re.compile(br"\ninvalid value for"),
+        re.compile(br"\n\r?bad command name"),
+        re.compile(br"\n\r?no such item"),
+        re.compile(br"\n\r?invalid value for"),
+        re.compile(br"\n\r?expected end of command"),
     ]
 
     def on_open_shell(self):
